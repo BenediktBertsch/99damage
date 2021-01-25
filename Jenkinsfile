@@ -15,7 +15,7 @@ pipeline {
 
     stage('Debugging') {
       steps {
-        sh 'npm i && chmod 777 ci/version_check.sh && ./ci/version_check.sh && npx build && npm publish'
+        sh 'npm i && chmod 777 ci/version_check.sh && sh ci/version_check.sh && npx build && npm publish'
       }
     }
 
